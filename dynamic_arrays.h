@@ -16,7 +16,7 @@ typedef struct {
 #define lines_append(lines, param)\
 do {\
 	if (lines.count >= lines.capacity) {\
-		if (lines.capacity == 0) lines.capacity = 256;\
+		if (lines.capacity == 0) lines.capacity = 4;\
 		else lines.capacity *= 2;\
 		lines.data = realloc(lines.data, lines.capacity*sizeof(*lines.data));\
 	}\

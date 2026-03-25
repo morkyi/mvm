@@ -1,5 +1,5 @@
 ; This is an example which computes the Fibonnaci sequence.
-; I recommend launching with -show_machine, -debug, and -pause
+; I recommend launching with -show_machine, -debug, and -pause_output
 PUSH  0
 STORE 0        ; memory[0] = 0
 PUSH  1

@@ -101,27 +101,23 @@ void jump_if_zero(FILE *fptr, char *buffer, int line)
 	if (top != 0) {
 		push(top);
 		return;
-	} else {
-		for (size_t i = 0; i < lines.count; ++i) {
-			if (bfrcmp(lines.data[i].label, jump_label))
-			fseek(fptr, lines.data[i].byte_offset,
-							SEEK_SET);
-		}
-	} 
+	}
+	for (size_t i = 0; i < lines.count; ++i) {
+		if (bfrcmp(lines.data[i].label, jump_label))
+			fseek(fptr, lines.data[i].byte_offset, SEEK_SET);
+	}
 }
 
 void jump(FILE *fptr, char *buffer, int line)
 {
 	char jump_label[MAX_LABEL_LENGTH];
 	if (sscanf(buffer, "JUMP %s", jump_label) != 1) {
-		fprintf(stderr, "Bad jump label at line %d", 
-							line);
+		fprintf(stderr, "Bad jump label at line %d", line);
 		exit(1);
 	}
 	for (size_t i = 0; i < lines.count; ++i) {
 		if (bfrcmp(lines.data[i].label, jump_label))
-			fseek(fptr, lines.data[i].byte_offset,
-						SEEK_SET);
+			fseek(fptr, lines.data[i].byte_offset, SEEK_SET);
 	}
 }
 
