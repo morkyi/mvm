@@ -103,8 +103,8 @@ void jump_if_zero(FILE *fptr, char *buffer, int line)
 		return;
 	}
 	for (size_t i = 0; i < lines.count; ++i) {
-		if (bfrcmp(lines.data[i].label, jump_label))
-			fseek(fptr, lines.data[i].byte_offset, SEEK_SET);
+		if (!bfrcmp(lines.data[i].label, jump_label)) continue;
+		fseek(fptr, lines.data[i].byte_offset, SEEK_SET);
 	}
 }
 
@@ -116,8 +116,8 @@ void jump(FILE *fptr, char *buffer, int line)
 		exit(1);
 	}
 	for (size_t i = 0; i < lines.count; ++i) {
-		if (bfrcmp(lines.data[i].label, jump_label))
-			fseek(fptr, lines.data[i].byte_offset, SEEK_SET);
+		if (!bfrcmp(lines.data[i].label, jump_label)) continue;
+		fseek(fptr, lines.data[i].byte_offset, SEEK_SET);
 	}
 }
 
