@@ -1,8 +1,7 @@
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
-//helper
 bool bfrcmp(char *buffer, char *instruction);
-//
+//real operations:
 void push(int value);
 int  pull();
 void dup();
