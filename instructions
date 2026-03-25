@@ -1,0 +1,8 @@
+PUSH <value> // add number to stack
+PULL         // remove from stack
+DUP          // duplicate top of stack
+ADD          // pull two and push sum
+SUB          // pull two and push dif
+MUL          // pull two and push product
+SAY          // pull top and print
+END          // turn off 

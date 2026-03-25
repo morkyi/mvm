@@ -1,0 +1,18 @@
+; This is an example which computes the Fibonnaci sequence.
+; I recommend launching with -show_machine, -debug, and -pause
+PUSH  0
+STORE 0        ; memory[0] = 0
+PUSH  1
+STORE 1        ; memory[1] = 1
+LABEL loop
+LOAD  0
+SAY            ; print memory[0]
+LOAD  1
+STORE 2        ; memory[2] = memory[1] (save second)
+LOAD  0
+LOAD  1
+ADD
+STORE 1        ; memory[1] = memory[0] + memory[1]
+LOAD  2
+STORE 0        ; memory[0] = old memory[1]
+JUMP loop
