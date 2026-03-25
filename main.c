@@ -160,9 +160,7 @@ int main(int argc, char **argv)
 			printf("\n");
     			if (!pause) printf("\033[2J\033[H");
 		}
-		if (pause) {
-			getchar();
-		}
+		if (pause) getchar();
 	}
 
 
