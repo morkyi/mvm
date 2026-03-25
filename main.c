@@ -9,7 +9,7 @@
 #include "lines.h"
 
 #define MAX_LINE_LENGTH  128
-#define MAX_LABEL_LENGTH 64
+#define MAX_LABEL_LENGTH 16 
 
 bool debug = false;
 bool b_show_machine = false;
