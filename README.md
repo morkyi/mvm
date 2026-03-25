@@ -1,1 +1,1 @@
-Only *tested* on Linux. No idea if it works on Windows :P
+Only *tested* on Linux. No idea if it would work on Windows :P
